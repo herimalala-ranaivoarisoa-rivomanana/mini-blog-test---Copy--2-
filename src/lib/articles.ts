@@ -1,7 +1,7 @@
 import { Article } from '@/types/article';
 import axios from 'axios';
 
-const isServer = typeof window === 'undefined';
+/* const isServer = typeof window === 'undefined'; */
 
 // 🔁 Base URL selon contexte
 /* const  =baseUrl isServer
