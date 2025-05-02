@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "prisma": {
+    "schema": "prisma/schema.prisma",
     "seed": "ts-node prisma/seed.ts"
   },
   "scripts": {
@@ -10,8 +11,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node prisma/seed.ts",
-    "postinstall": "prisma generate && prisma migrate deploy && prisma db seed"
+    "seed": "ts-node prisma/seed.ts",
+    "postinstall": "prisma generate --schema=prisma/schema.prisma && prisma migrate deploy --schema=prisma/schema.prisma && prisma db seed --schema=prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^6.7.0",
