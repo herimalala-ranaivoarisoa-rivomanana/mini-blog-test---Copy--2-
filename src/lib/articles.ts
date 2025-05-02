@@ -5,7 +5,7 @@ const isServer = typeof window === 'undefined';
 
 // 🔁 Base URL selon contexte
 const baseUrl = isServer
-  ? '/'
+  ? ''
   : process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
 console.log('🔗 Base URL utilisée pour Axios:', baseUrl);
