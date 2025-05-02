@@ -13,6 +13,7 @@ console.log('🔗 Base URL utilisée pour Axios:', baseUrl);
 export const getAllArticles = async (): Promise<Article[]> => {
   try {
     const response = await axios.get(`${baseUrl}/api/articles`);
+    console.log("RESPONSE",response)
     return response.data;
   } catch (error) {
     console.error('❌ Erreur lors de la récupération des articles:', error);
