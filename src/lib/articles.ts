@@ -4,10 +4,11 @@ import axios from 'axios';
 const isServer = typeof window === 'undefined';
 
 // 🔁 Base URL selon contexte
-const baseUrl = isServer
+/* const  =baseUrl isServer
   ? process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'
   : '';
-
+ */
+  const baseUrl = ''
 console.log('🔗 Base URL utilisée pour Axios:', baseUrl);
 
 export const getAllArticles = async (): Promise<Article[]> => {
