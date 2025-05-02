@@ -12,13 +12,14 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "ts-node prisma/seed.ts",
-    "postinstall": "prisma generate --schema=prisma/schema.prisma && prisma migrate deploy --schema=prisma/schema.prisma && prisma db seed --schema=prisma/schema.prisma"
-  },
+    "railway:setup": "tsx scripts/railway-setup.ts",
+    "postinstall": "npm run railway:setup"},
   "dependencies": {
     "@prisma/client": "^6.7.0",
     "axios": "^1.9.0",
     "bcrypt": "^5.1.1",
     "dayjs": "^1.11.13",
+    "dotenv": "^16.5.0",
     "jsonwebtoken": "^9.0.2",
     "next": "15.3.1",
     "react": "^19.0.0",
@@ -29,7 +30,7 @@
     "@tailwindcss/postcss": "^4",
     "@types/bcrypt": "^5.0.2",
     "@types/jsonwebtoken": "^9.0.9",
-    "@types/node": "^20",
+    "@types/node": "^20.17.32",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
@@ -37,6 +38,7 @@
     "prisma": "^6.7.0",
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
   "description": "Ce projet est une application frontend construite avec Next.js et TypeScript, qui affiche une liste d’articles depuis une source locale. Il respecte les exigences de SSR, ISR, typage strict, et optimisation des images.",
