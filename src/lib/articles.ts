@@ -1,14 +1,13 @@
 import { Article } from '@/types/article';
 import axios from 'axios';
 
-/* const isServer = typeof window === 'undefined'; */
+const isServer = typeof window === 'undefined';
 
 // 🔁 Base URL selon contexte
-/* const  =baseUrl isServer
-  ? process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'
-  : '';
- */
-  const baseUrl = ''
+const baseUrl = isServer
+  ? '/'
+  : process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+
 console.log('🔗 Base URL utilisée pour Axios:', baseUrl);
 
 export const getAllArticles = async (): Promise<Article[]> => {
