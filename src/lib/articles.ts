@@ -3,6 +3,8 @@ import axios from 'axios';
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
 
+console.log("baseURL",baseUrl)
+
 export const getAllArticles = async (): Promise<Article[]> => {
   try {
     const response = await axios.get(`${baseUrl}/api/articles`);
