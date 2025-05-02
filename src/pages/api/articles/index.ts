@@ -28,7 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } else if (req.method === 'GET') {
     try {
       const articles = await prisma.article.findMany({});
-      console.log("DATA", articles)
       return res.status(200).json(articles);
     } catch (error) {
       console.error('Erreur dans GET /api/articles:', error);
